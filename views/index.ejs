@@ -1,27 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <% include partials/head %> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ballknowers</title>
+  <link rel="stylesheet" href="path/to/your/styles.css"> <!-- Include your CSS file here -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Bootstrap CSS -->
 </head>
 <body>
-<% include partials/menu %>
+  <header>
+    <!-- Include your menu here -->
+    <% include partials/menu %>
+  </header>
 
-<div class="container-fluid bg-3 text-center">    
-  <h3><%= page %></h3><br>
-  <div class="row">
-    <div class="col-sm-4">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      
-    </div>
-    <div class="col-sm-4"> 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="col-sm-4"> 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-  </div>
-</div>
+  <main class="container-fluid bg-3 text-center">
+    <h1>Ballknowers</h1>
 
+    <!-- Top Row of Members -->
+    <div class="row mb-4">
+      <div class="col-sm-6 col-md-4">
+        <h2>Nick</h2>
+        <h3>Win-Loss Record</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Team</th>
+              <th>Wins</th>
+              <th>Losses</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>49ers</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Packers</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Browns</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Raiders</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4>Total Record</h4>
+        <p>Wins: <span id="nick-wins">0</span> | Losses: <span id="nick-losses">0</span></p>
+      </div>
+
+      <div class="col-sm-6 col-md-4">
+        <h2>Kyle</h2>
+        <h3>Win-Loss Record</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Team</th>
+              <th>Wins</th>
+              <th>Losses</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Chiefs</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Texans</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Bears</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Commanders</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4>Total Record</h4>
+        <p>Wins: <span id="kyle-wins">0</span> | Losses: <span id="kyle-losses">0</span></p>
+      </div>
+
+      <div class="col-sm-6 col-md-4">
+        <h2>Joe</h2>
+        </ul>
+        <h3>Win-Loss Record</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Team</th>
+              <th>Wins</th>
+              <th>Losses</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Eagles</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Dolphins</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Cowboys</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Bucs</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4>Total Record</h4>
+        <p>Wins: <span id="joe-wins">0</span> | Losses: <span id="joe-losses">0</span></p>
+      </div>
+    </div>
+
+    <!-- Bottom Row of Members -->
+    <div class="row">
+      <div class="col-sm-6 col-md-4">
+        <h2>Mark</h2>
+        <h3>Win-Loss Record</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Team</th>
+              <th>Wins</th>
+              <th>Losses</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Lions</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Ravens</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Rams</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Seahawks</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4>Total Record</h4>
+        <p>Wins: <span id="mark-wins">0</span> | Losses: <span id="mark-losses">0</span></p>
+      </div>
+
+      <div class="col-sm-6 col-md-4">
+        <h2>Brandon</h2>
+        <h3>Win-Loss Record</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Team</th>
+              <th>Wins</th>
+              <th>Losses</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Bengals</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Bills</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Colts</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Chargers</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4>Total Record</h4>
+        <p>Wins: <span id="brandon-wins">0</span> | Losses: <span id="brandon-losses">0</span></p>
+      </div>
+
+      <div class="col-sm-6 col-md-4">
+        <h2>Chad</h2>
+        <h3>Win-Loss Record</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Team</th>
+              <th>Wins</th>
+              <th>Losses</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jets</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Falcons</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Jaguars</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Steelers</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+        <h4>Total Record</h4>
+        <p>Wins: <span id="chad-wins">0</span> | Losses: <span id="chad-losses">0</span></p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <!-- Include your scripts here -->
+    <% include partials/script %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </footer>
 </body>
-<% include partials/script %>
 </html>

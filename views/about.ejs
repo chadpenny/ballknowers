@@ -1,27 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <% include partials/head %> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ballknowers Blog</title>
+  <link rel="stylesheet" href="path/to/your/styles.css"> <!-- Include your CSS file here -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Bootstrap CSS -->
 </head>
 <body>
-<% include partials/menu %>
+  <header>
+    <!-- Include your menu here -->
+    <% include partials/menu %>
+  </header>
 
-<div class="container-fluid bg-3 text-center">    
-  <h3><%= page %></h3><br>
-  <div class="row">
-    <div class="col-sm-4">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      
-    </div>
-    <div class="col-sm-4"> 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="col-sm-4"> 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-  </div>
-</div>
+  <main class="container-fluid bg-3 text-center">
+    <h1>Ballknowers Blog</h1>
 
+    <!-- Submission Form -->
+    <div class="container">
+      <h2>Submit Your Picks for the Week</h2>
+      <form id="submission-form">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="title">Title:</label>
+          <input type="text" class="form-control" id="title" name="title" required>
+        </div>
+        <div class="form-group">
+          <label for="content">Content:</label>
+          <textarea class="form-control" id="content" name="content" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+
+    <!-- Submitted Ideas Section -->
+    <div class="container mt-4">
+      <h2>Submitted Ideas</h2>
+      <div id="ideas-list">
+        <!-- Submitted ideas will be displayed here -->
+        <!-- Example static post -->
+        <div class="post mb-4">
+          <h3>Example Post Title</h3>
+          <p><strong>By:</strong> Example Name</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <!-- End of example post -->
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <!-- Include your scripts here -->
+    <% include partials/script %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#submission-form').on('submit', function(event) {
+          event.preventDefault();
+          
+          // Get form data
+          const name = $('#name').val();
+          const title = $('#title').val();
+          const content = $('#content').val();
+
+          // Create a new post element
+          const newPost = `
+            <div class="post mb-4">
+              <h3>${title}</h3>
+              <p><strong>By:</strong> ${name}</p>
+              <p>${content}</p>
+            </div>
+          `;
+
+          // Append new post to the ideas list
+          $('#ideas-list').append(newPost);
+
+          // Clear the form
+          $('#submission-form')[0].reset();
+        });
+      });
+    </script>
+  </footer>
 </body>
-<% include partials/script %>
 </html>
